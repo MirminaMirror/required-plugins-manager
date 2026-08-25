@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="80" y2="80" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#3884FF"/>
+      <stop offset="100%" stop-color="#7B3FE4"/>
+    </linearGradient>
+    <linearGradient id="puzzleGrad" x1="16" y1="16" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#E9EEF9"/>
+    </linearGradient>
+    <filter id="dropShadow" x="10" y="12" width="60" height="60" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Background rounded rectangle -->
+  <rect width="80" height="80" rx="18" fill="url(#bgGrad)"/>
+
+  <!-- Main plugin puzzle piece with checkmark badge -->
+  <g filter="url(#dropShadow)">
+    <!-- Puzzle Base Body -->
+    <path d="M26 22C23.7909 22 22 23.7909 22 26V35C24.5 35 26.5 37 26.5 39.5C26.5 42 24.5 44 22 44V54C22 56.2091 23.7909 58 26 58H36C36 55.5 38 53.5 40.5 53.5C43 53.5 45 55.5 45 58H54C56.2091 58 58 56.2091 58 54V45C55.5 45 53.5 43 53.5 40.5C53.5 38 55.5 36 58 36V26C58 23.7909 56.2091 22 54 22H44.5C44.5 24.5 42.5 26.5 40 26.5C37.5 26.5 35.5 24.5 35.5 22H26Z" fill="url(#puzzleGrad)"/>
+    
+    <!-- Required / Essential Pin / Star Accent on bottom right -->
+    <circle cx="53" cy="53" r="11" fill="#FFC72C"/>
+    <path d="M53 46.5L54.8 50.2L58.9 50.8L55.9 53.7L56.6 57.8L53 55.9L49.4 57.8L50.1 53.7L47.1 50.8L51.2 50.2L53 46.5Z" fill="#1D2024"/>
+    
+    <!-- Inner subtle line details -->
+    <circle cx="33" cy="33" r="3.5" fill="#3884FF" fill-opacity="0.85"/>
+  </g>
+</svg>
