@@ -1,0 +1,65 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <id>com.github.mirminamirror.required.plugins.manager</id>
+    <name>Required Dependencies Manager</name>
+    <vendor url="https://github.com/MirminaMirror/required-plugins-manager">MirminaMirror</vendor>
+    <description><![CDATA[
+      <p><b>Required Dependencies Manager</b> allows developers to seamlessly manage and configure project-required plugins directly inside the native <code>Settings &gt; Plugins</code> interface.</p>
+      <p>直接在 IDE 原生 <code>Settings &gt; Plugins</code>（插件管理）界面中便捷管理和配置当前项目的必需插件。</p>
+      <hr/>
+
+      <h3>English</h3>
+      <h4>✨ Key Features</h4>
+      <ul>
+        <li><b>Native Plugins UI Integration:</b> Manage required plugins directly in the standard <code>Settings / Preferences &gt; Plugins</code> window.</li>
+        <li><b>Marketplace Batch Installation:</b> Pins uninstalled required plugins at the top of the Marketplace tab with a one-click <b>Install All</b> action.</li>
+        <li><b>Installed Batch Enabling:</b> Pins disabled required plugins at the top of the Installed tab with a one-click <b>Enable All</b> action.</li>
+        <li><b>Card Badges &amp; Context Menu:</b> Displays a distinctive <code>Required</code> badge on plugin cards and provides right-click context menu options to mark or unmark required status instantly.</li>
+        <li><b>Detailed Version Constraints:</b> Configure minimum (Min) and maximum (Max) version constraints in the plugin details pane, with a quick button to fill the currently installed version.</li>
+        <li><b>Dedicated Search Filter:</b> Use <code>/tag:Required</code> in the search bar to filter and count project-required plugins instantly.</li>
+      </ul>
+
+      <h4>📖 Usage</h4>
+      <ol>
+        <li>Open <b>Settings / Preferences &gt; Plugins</b>.</li>
+        <li><b>Mark as Required:</b> Right-click any plugin card, or check <b>Set as project required plugin</b> in the plugin details pane.</li>
+        <li><b>Version Constraints:</b> Optionally set Min/Max versions in the details pane.</li>
+        <li><b>Quick Filter:</b> Type <code>/tag:Required</code> in the search bar to show all required plugins.</li>
+        <li><b>Batch Setup:</b> When missing plugins, click <b>Install All</b> in Marketplace or <b>Enable All</b> in Installed.</li>
+        <li>Click <b>Apply</b> or <b>OK</b> to save.</li>
+      </ol>
+
+      <hr/>
+
+      <h3>简体中文</h3>
+      <h4>✨ 核心特性</h4>
+      <ul>
+        <li><b>原生 Plugins 界面无缝增强：</b>直接在日常使用的 <code>Settings / Preferences &gt; Plugins</code> 界面中操作，无需跳转子菜单。</li>
+        <li><b>Marketplace 置顶与一键安装：</b>在 Marketplace 顶部置顶展示当前项目“未安装的必需插件”分组，支持一键<b>全部安装</b>。</li>
+        <li><b>Installed 置顶与一键启用：</b>在 Installed 顶部置顶展示当前项目“未启用的必需插件”分组，支持一键<b>全部启用</b>。</li>
+        <li><b>卡片专属徽标与右键菜单：</b>列表卡片直观展示 <code>Required</code> 徽标，并支持右键卡片快捷标记或取消标记。</li>
+        <li><b>版本区间精准约束：</b>在插件详情页配置最低（Min）与最高（Max）版本限制，支持一键填入当前版本。</li>
+        <li><b>搜索栏专属过滤：</b>在搜索框输入或选择 <code>/tag:Required</code> 即可快速筛选出当前项目的所有必需插件。</li>
+      </ul>
+
+      <h4>📖 使用说明</h4>
+      <ol>
+        <li>打开 <b>Settings / Preferences &gt; Plugins</b>。</li>
+        <li><b>标记必需插件：</b>右键任意插件卡片选择“设为当前项目必需插件”，或在插件详情页勾选“设为当前项目必需插件”。</li>
+        <li><b>版本约束配置：</b>按需在详情页中设定最低/最高版本限制。</li>
+        <li><b>快速检索：</b>在搜索栏输入 <code>/tag:Required</code> 快速筛选所有必需插件。</li>
+        <li><b>一键装配：</b>在 Marketplace 顶部点击“全部安装”，或在 Installed 顶部点击“全部启用”。</li>
+        <li>点击 <b>Apply</b> 或 <b>OK</b> 保存即可。</li>
+      </ol>
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <resource-bundle>messages.RequiredPluginsManagerBundle</resource-bundle>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!--suppress PluginXmlValidity -->
+        <pluginsViewCustomizer
+                implementation="com.github.mirminamirror.required.plugins.manager.view.RequiredPluginsViewCustomizer" />
+    </extensions>
+</idea-plugin>

@@ -1,0 +1,14 @@
+# Folders
+.gradle/
+.idea/
+.intellijPlatform/
+.kotlin/
+build/
+references/
+temp/
+.official-intellij/
+
+# Files
+.DS_Store
+*.zip
+*.bak
